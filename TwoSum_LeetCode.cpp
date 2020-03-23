@@ -22,7 +22,7 @@ public:
 		//now traverse each num and check corresponding pair's location
 		for (int i = 0; i < size; i++)
 		{
-			if (map.find(target - nums[i]) != map.end())
+			if (map.find(target - nums[i]) != map.end() && i != map[target - nums[i]])
 			{
 				return { i, map[target - nums[i]] };
 			}
