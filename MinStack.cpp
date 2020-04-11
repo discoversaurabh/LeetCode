@@ -30,7 +30,7 @@ class MinStack {
     
     void push(int x) {
         stack.push_back(x);
-        if(min.empty()||min.back()>=x)
+        if(min.empty()||min.back()>=x) // very important condition : "min.empty()" => generally gets missed
             min.push_back(x);
     }
     
